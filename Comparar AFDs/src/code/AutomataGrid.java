@@ -78,7 +78,7 @@ public class AutomataGrid {
     
     private void crearEstado(){
         if(contador <= 11){ //Limite de estados de 11 para efectos del diseño
-            labelsEstados.add(new Label("q"+ (EntradaDeDatos.subscript(Integer.toString(contador)))));
+            labelsEstados.add(new Label("q"+ (GUI.subscript(Integer.toString(contador)))));
             contador++;
             grid.add(labelsEstados.get(labelsEstados.size()-1), contador, 2, 1, 1);
 
@@ -116,7 +116,7 @@ public class AutomataGrid {
                 transiciones[i].setMaxWidth(45);
 
 
-                grid.add(new Label("q"+EntradaDeDatos.subscript(Integer.toString(estados[i]))), 1, i+5);
+                grid.add(new Label("q"+GUI.subscript(Integer.toString(estados[i]))), 1, i+5);
                 grid.add(new Label(""+alfabeto[i]), 2, i+5);
                 grid.add(transiciones[i], 3, i+5, 2, 1);
             }
